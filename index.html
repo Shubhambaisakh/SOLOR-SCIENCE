@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solar Science - India's premium Solar EPC and Insurance solutions provider.">
+  <title>Home | Solar Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F5A623'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Cpath d='M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42' stroke='%23F5A623' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <svg class="preloader-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="5" fill="none" stroke="#F5A623" stroke-width="2"/>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#F5A623" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+      <span class="preloader-text">Solar Science</span>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_transparent.png" alt="Solar Science Logo" class="logo-image">
+        <div class="logo-text-wrapper">
+          <span class="logo-title">Solar Science</span>
+          <span class="logo-tagline">CLEAN ENERGY, SMART DECISION</span>
+        </div>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="contact.html" class="btn btn-primary btn-nav">Get Quote</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-particles"></div>
+    
+    <div class="container">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="badge-icon">⚡</span>
+          <span>India's #1 Solar Solution</span>
+        </div>
+        <h1 class="hero-title-new">
+          <span class="letter-animate">Transform Sunlight Into</span>
+          <span class="gradient-text letter-animate">Sustainable Savings</span>
+        </h1>
+        <p class="hero-subtitle">Premium solar installations that pay for themselves. Join 1000+ satisfied customers who've reduced their electricity bills by up to 90%.</p>
+        
+        <div class="hero-stats-inline">
+          <div class="stat-inline">
+            <div class="stat-number-hero" data-target="500">0<span class="stat-plus">+</span></div>
+            <div class="stat-label-hero">Consulted Clients</div>
+          </div>
+          <div class="stat-inline stat-highlight">
+            <div class="stat-badge-text">Procurement</div>
+            <div class="stat-label-hero">Specialist</div>
+          </div>
+          <div class="stat-inline">
+            <div class="stat-number-hero" data-target="1000">0<span class="stat-plus">+</span></div>
+            <div class="stat-label-hero">Cases Handled</div>
+          </div>
+          <div class="stat-inline">
+            <div class="stat-number-hero" data-target="39">0</div>
+            <div class="stat-label-hero">Cities We Serve</div>
+          </div>
+          <div class="stat-inline">
+            <div class="stat-number-hero" data-target="25">0<span class="stat-plus">+</span></div>
+            <div class="stat-label-hero">Years Warranty</div>
+          </div>
+        </div>
+        
+        <div class="hero-ctas-new">
+          <a href="contact.html" class="btn btn-hero-primary">
+            <span>Get Free Consultation</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="about.html" class="btn btn-hero-secondary">
+            <i data-lucide="play-circle"></i>
+            <span>Learn More</span>
+          </a>
+        </div>
+        
+        <div class="hero-trust-new">
+          <div class="trust-item-new">
+            <i data-lucide="shield-check"></i>
+            <span>100% Insurance Protected</span>
+          </div>
+          <div class="trust-item-new">
+            <i data-lucide="award"></i>
+            <span>Tier-1 Components</span>
+          </div>
+          <div class="trust-item-new">
+            <i data-lucide="clock"></i>
+            <span>Quick 30-Day Installation</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="energy-visualization">
+          <!-- Animated Sun -->
+          <div class="animated-sun">
+            <div class="sun-core"></div>
+            <div class="sun-ray sun-ray-1"></div>
+            <div class="sun-ray sun-ray-2"></div>
+            <div class="sun-ray sun-ray-3"></div>
+            <div class="sun-ray sun-ray-4"></div>
+            <div class="sun-ray sun-ray-5"></div>
+            <div class="sun-ray sun-ray-6"></div>
+            <div class="sun-ray sun-ray-7"></div>
+            <div class="sun-ray sun-ray-8"></div>
+          </div>
+          
+          <!-- Energy Flow Lines -->
+          <svg class="energy-flow" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="energy-line energy-line-1" d="M200,100 Q250,150 200,200" stroke="#EAB308" stroke-width="3" stroke-linecap="round"/>
+            <path class="energy-line energy-line-2" d="M200,100 Q150,150 200,200" stroke="#EAB308" stroke-width="3" stroke-linecap="round"/>
+            <path class="energy-line energy-line-3" d="M200,100 Q200,150 250,200" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+            <path class="energy-line energy-line-4" d="M200,100 Q200,150 150,200" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+            
+            <!-- Particles -->
+            <circle class="energy-particle particle-1" cx="200" cy="100" r="4" fill="#EAB308"/>
+            <circle class="energy-particle particle-2" cx="200" cy="100" r="4" fill="#FBBF24"/>
+            <circle class="energy-particle particle-3" cx="200" cy="100" r="4" fill="#FCD34D"/>
+            <circle class="energy-particle particle-4" cx="200" cy="100" r="4" fill="#EAB308"/>
+            <circle class="energy-particle particle-5" cx="200" cy="100" r="4" fill="#FBBF24"/>
+            <circle class="energy-particle particle-6" cx="200" cy="100" r="4" fill="#FCD34D"/>
+          </svg>
+          
+          <!-- Solar Panel with Energy Effect -->
+          <div class="modern-panel">
+            <div class="panel-glow"></div>
+            <div class="panel-grid">
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+              <div class="panel-cell"></div>
+            </div>
+            <div class="energy-indicator">
+              <div class="indicator-bar"></div>
+              <span class="indicator-text">Generating</span>
+            </div>
+          </div>
+          
+          <!-- Floating Statistics -->
+          <div class="floating-stat stat-1">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-value">50+ MW</div>
+          </div>
+          <div class="floating-stat stat-2">
+            <div class="stat-icon">💡</div>
+            <div class="stat-value">500+ Projects</div>
+          </div>
+          <div class="floating-stat stat-3">
+            <div class="stat-icon">🌱</div>
+            <div class="stat-value">CO₂ Saved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLAR SAVINGS CALCULATOR SECTION -->
+  <section class="section calculator-section">
+    <div class="container">
+      <div class="calculator-wrapper reveal">
+        <div class="calculator-header">
+          <h2 class="calculator-title">Calculate Your <span class="gradient-text">Solar Savings</span></h2>
+          <p class="calculator-subtitle">Instant estimation for your property</p>
+        </div>
+        
+        <div class="calculator-content">
+          <!-- Customer Type Selection -->
+          <div class="calculator-group">
+            <label class="calculator-label">CUSTOMER TYPE</label>
+            <div class="type-buttons">
+              <button class="type-btn active" data-type="home">Home</button>
+              <button class="type-btn" data-type="commercial">Commercial</button>
+              <button class="type-btn" data-type="industry">Industry</button>
+            </div>
+          </div>
+          
+          <!-- Monthly Bill Input -->
+          <div class="calculator-group">
+            <label class="calculator-label">MONTHLY BILL (₹)</label>
+            <input type="number" id="monthlyBill" class="calculator-input" placeholder="5000" value="5000">
+          </div>
+          
+          <!-- Results Grid -->
+          <div class="calculator-results">
+            <div class="result-card">
+              <div class="result-icon">⚡</div>
+              <div class="result-label">SYSTEM SIZE</div>
+              <div class="result-value" id="systemSize">6 kW</div>
+            </div>
+            
+            <div class="result-card">
+              <div class="result-icon">💰</div>
+              <div class="result-label">ANNUAL SAVINGS</div>
+              <div class="result-value green" id="annualSavings">₹69.1k</div>
+            </div>
+            
+            <div class="result-card">
+              <div class="result-icon">🔋</div>
+              <div class="result-label">YEARLY GEN.</div>
+              <div class="result-value" id="yearlyGen">8640 units</div>
+            </div>
+            
+            <div class="result-card">
+              <div class="result-icon">📐</div>
+              <div class="result-label">ROOF NEEDED</div>
+              <div class="result-value" id="roofNeeded">480 sqft</div>
+            </div>
+          </div>
+          
+          <!-- Quote Section -->
+          <div class="calculator-quote">
+            <div class="quote-price">
+              <span class="quote-label">Effective Solar Cost</span>
+              <span class="quote-amount" id="solarCost">₹2,70,000</span>
+            </div>
+            <div class="quote-form">
+              <input type="text" placeholder="Name" class="quote-input">
+              <input type="tel" placeholder="Mobile" class="quote-input">
+              <button class="btn btn-primary quote-btn">
+                <span>Get Quote</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="section why-us">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Engineering Excellence Meets Investment Security</h2>
+        <p class="section-desc">We deliver premium solar solutions backed by top-tier engineering expertise and comprehensive insurance protection.</p>
+      </div>
+      
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <path d="M32 6L36 22H52L39 32L43 48L32 40L21 48L25 32L12 22H28L32 6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="32" cy="32" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Premium Quality Components</h3>
+          <p class="why-card-desc">We only source Tier-1 modules, state-of-the-art inverters, and premium structures to ensure 25+ years of robust plant generation.</p>
+        </div>
+        
+        <div class="why-card reveal reveal-delay-2">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <rect x="12" y="12" width="40" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 28h24M20 36h24M28 20v24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="6" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">End-to-End EPC Solutions</h3>
+          <p class="why-card-desc">From feasibility design, government approvals, procurement, construction, to net-metering — we manage everything in-house.</p>
+        </div>
+        
+        <div class="why-card reveal reveal-delay-3">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <path d="M32 8L38 18L50 20L41 29L43 41L32 35L21 41L23 29L14 20L26 18L32 8Z" fill="currentColor"/>
+              <path d="M32 16v20M24 26l16 8M24 34l16-8" stroke="white" stroke-width="2" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Comprehensive Insurance Support</h3>
+          <p class="why-card-desc">We provide exclusive, direct assistance in securing comprehensive asset insurance, protecting your assets from day one.</p>
+        </div>
+        
+        <div class="why-card reveal reveal-delay-1">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 14v18l12 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">On-Time Project Execution</h3>
+          <p class="why-card-desc">Strict adherence to project timelines and safety protocols, backed by penalty-bound delivery guarantees.</p>
+        </div>
+        
+        <div class="why-card reveal reveal-delay-2">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <path d="M20 24L32 16L44 24V44L32 52L20 44V24Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M26 36l4 4l8-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="30" r="8" fill="currentColor" opacity="0.2"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Dedicated After-Sales Support</h3>
+          <p class="why-card-desc">Continuous plant health monitoring and fast, on-site maintenance services to prevent downtime.</p>
+        </div>
+        
+        <div class="why-card reveal reveal-delay-3">
+          <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" width="32" height="32">
+              <path d="M16 48L24 32L20 24L32 12L40 24L36 32L48 48H16Z" fill="currentColor" opacity="0.3"/>
+              <path d="M16 48L24 32L32 40L40 32L48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="32" r="2" fill="currentColor"/>
+              <circle cx="32" cy="40" r="2" fill="currentColor"/>
+              <circle cx="40" cy="32" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Maximum ROI</h3>
+          <p class="why-card-desc">Optimized system design for maximum energy generation and fastest return on your investment.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR WORK IN ACTION - GALLERY SECTION -->
+  <section class="section work-gallery bg-dark">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Solar Solutions in Action</h2>
+        <p class="section-desc">From rooftop installations to large-scale commercial projects — witness our engineering excellence.</p>
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item reveal reveal-delay-1">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Large Scale Solar Farm">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Mega Solar Farm</h3>
+                <p class="gallery-desc">2MW System • Rajasthan</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item reveal reveal-delay-2">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Commercial Rooftop Solar">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Commercial Rooftop</h3>
+                <p class="gallery-desc">150kW System • Delhi</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item reveal reveal-delay-3">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Solar Panel Array">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Premium Tier-1 Panels</h3>
+                <p class="gallery-desc">High Efficiency Modules</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item reveal reveal-delay-1">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Industrial Solar Installation">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Industrial Complex</h3>
+                <p class="gallery-desc">500kW System • Pune</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item reveal reveal-delay-2">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Solar Power Plant">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Solar Power Plant</h3>
+                <p class="gallery-desc">1MW System • Karnataka</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item reveal reveal-delay-3">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?ixlib=rb-4.0.3&w=800&h=600&fit=crop&crop=center" alt="Residential Rooftop Solar">
+            <div class="gallery-overlay">
+              <div class="gallery-content">
+                <h3 class="gallery-title">Residential Rooftop</h3>
+                <p class="gallery-desc">10kW System • Mumbai</p>
+                <span class="gallery-badge">✓ Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-cta reveal">
+        <a href="projects.html" class="btn btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="banner">
+    <div class="container">
+      <div class="banner-content reveal">
+        <h2 class="banner-title">Ready to Make the Switch to Solar?</h2>
+        <p class="banner-desc">Join thousands of satisfied customers who are saving money and the environment.</p>
+        <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo-area">
+          <a href="index.html" class="logo" style="color: var(--color-white);">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Solar Science</span>
+          </a>
+          <p class="footer-tagline">Leading the transition to clean energy with performance guarantees and absolute asset security.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="projects.html" class="footer-link">Projects</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <div class="contact-text">
+                <strong>Solar Science India Ltd.</strong>
+                <p>Sector 62, Noida, UP - 201301</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <div class="contact-text">
+                <a href="tel:+918001021234">1800-102-1234</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <div class="contact-text">
+                <a href="mailto:info@solarscience.in">info@solarscience.in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solar Science. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
