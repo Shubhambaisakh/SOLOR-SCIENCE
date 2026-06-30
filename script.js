@@ -433,33 +433,41 @@ window.addEventListener('load', () => {
 });
 
 /* ==========================================================================
-   SOLAR CALCULATOR FUNCTIONALITY - ACCURATE INDIAN CALCULATIONS
+   SOLAR CALCULATOR FUNCTIONALITY - CUSTOM CALCULATIONS
    ========================================================================== */
 const calculatorInit = () => {
   const typeButtons = document.querySelectorAll('.type-btn');
   const monthlyBillInput = document.getElementById('monthlyBill');
   let currentType = 'home';
 
-  // India electricity rates per unit by customer type (₹/kWh)
-  const tariffRates = {
-    home:       7.0,   // avg residential ~₹7/unit
-    commercial: 9.0,   // avg commercial ~₹9/unit
-    industry:   8.0    // avg industrial ~₹8/unit
-  };
+  // Per kW installation cost
+  const costPerKW = 63000;
 
-  // Solar cost per kW by customer type (installation cost ₹/kW)
-  const costPerKW = {
-    home:       45000,  // residential ₹45k/kW
-    commercial: 42000,  // commercial ₹42k/kW
-    industry:   38000   // industrial ₹38k/kW
+  // Bill range to kW mapping
+  const getSystemSizeFromBill = (bill) => {
+    if (bill >= 1000 && bill <= 3000) {
+      return 3; // 3 kW
+    } else if (bill >= 3001 && bill <= 5000) {
+      return 5; // 5 kW
+    } else if (bill >= 5001 && bill <= 8000) {
+      return 7; // 7 kW
+    } else if (bill >= 8001 && bill <= 12000) {
+      return 10; // 10 kW
+    } else if (bill >= 12001 && bill <= 20000) {
+      return 15; // 15 kW
+    } else if (bill >= 20001 && bill <= 35000) {
+      return 25; // 25 kW
+    } else if (bill >= 35001 && bill <= 60000) {
+      return 40; // 40 kW
+    } else if (bill >= 60001) {
+      return 50; // 50 kW
+    } else {
+      return 2; // Default 2 kW for bills below 1000
+    }
   };
 
   // Roof area per kW (sqft)
-  const roofPerKW = {
-    home:       90,
-    commercial: 80,
-    industry:   75
-  };
+  const roofPerKW = 80;
 
   typeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -477,31 +485,23 @@ const calculatorInit = () => {
 
   function calculateSavings() {
     const monthlyBill = parseFloat(monthlyBillInput.value) || 5000;
-    const rate        = tariffRates[currentType];
 
-    // Step 1: Monthly units consumed
-    const monthlyUnits = monthlyBill / rate;
+    // Step 1: Get system size based on bill range
+    const systemSize = getSystemSizeFromBill(monthlyBill);
 
-    // Step 2: Daily units
-    const dailyUnits = monthlyUnits / 30;
+    // Step 2: Calculate total cost (kW × ₹63,000)
+    const totalCost = systemSize * costPerKW;
 
-    // Step 3: System size (1kW generates ~4 units/day in India avg 5 sun hours)
-    const rawKW = dailyUnits / 4;
-    const systemSize = Math.ceil(rawKW * 2) / 2;  // round up to nearest 0.5 kW
+    // Step 3: Yearly generation (1kW = ~1440 units/year in India)
+    const yearlyGen = Math.round(systemSize * 1440);
 
-    // Step 4: Yearly generation (1kW = ~1460 units/year in India)
-    const yearlyGen = Math.round(systemSize * 1460);
-
-    // Step 5: Annual savings (solar covers ~90% of bill)
+    // Step 4: Annual savings (assuming 90% bill reduction)
     const annualSavings = monthlyBill * 12 * 0.90;
 
-    // Step 6: Roof space needed
-    const roofNeeded = Math.round(systemSize * roofPerKW[currentType]);
+    // Step 5: Roof space needed
+    const roofNeeded = Math.round(systemSize * roofPerKW);
 
-    // Step 7: Total installation cost
-    const totalCost = Math.round(systemSize * costPerKW[currentType]);
-
-    // Format cost nicely
+    // Format cost display
     let costDisplay;
     if (totalCost >= 100000) {
       costDisplay = '₹' + (totalCost / 100000).toFixed(2) + ' Lakh';
