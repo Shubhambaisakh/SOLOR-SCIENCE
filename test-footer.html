@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      background: #0F2C59; 
+      font-family: Arial, sans-serif;
+      padding: 50px 20px;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      color: white;
+    }
+    .footer-logo-area h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .footer-logo-area p {
+      color: #94A3B8;
+      font-size: 14px;
+    }
+    .footer-title {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .footer-links {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+      color: #94A3B8;
+    }
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: #94A3B8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="footer-top">
+      
+      <!-- Solar Science -->
+      <div class="footer-logo-area">
+        <h2>☀️ Solar Science</h2>
+        <p>Leading the transition to clean energy with performance guarantees.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="footer-title">QUICK LINKS</h4>
+        <ul class="footer-links">
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us -->
+      <div>
+        <h4 class="footer-title">CONTACT US</h4>
+        <div class="contact-item">
+          📍 Solar Science India Ltd.<br>
+          Sector 62, Noida, UP - 201301
+        </div>
+        <div class="contact-item">
+          📞 1800-102-1234
+        </div>
+        <div class="contact-item">
+          ✉️ info@solarscience.in
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>

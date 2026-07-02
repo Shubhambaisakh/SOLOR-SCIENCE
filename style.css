@@ -1670,15 +1670,74 @@ img, svg {
   }
   
   .calculator-wrapper {
-    padding: 30px 20px;
+    padding: 24px 16px;
   }
   
   .calculator-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+  
+  .calculator-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .calculator-results {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .result-card {
+    padding: 16px 12px;
+  }
+  
+  .result-icon {
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+  }
+  
+  .result-label {
+    font-size: 0.7rem;
+  }
+  
+  .result-value {
+    font-size: 1.25rem;
+  }
+  
+  .calculator-quote {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .quote-price {
+    text-align: center;
   }
   
   .quote-amount {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+  
+  .quote-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .quote-input {
+    width: 100%;
+    font-size: 16px !important;
+  }
+  
+  .quote-btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+  
+  .type-buttons {
+    gap: 8px;
+  }
+  
+  .type-btn {
+    font-size: 0.85rem;
+    padding: 10px 16px;
   }
 }
 
@@ -1720,7 +1779,7 @@ img, svg {
 
 .why-grid {
   display: grid;
-  grid-template-cols: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   position: relative;
   z-index: 10;
@@ -2209,7 +2268,7 @@ img, svg {
 
 .insurance-grid {
   display: grid;
-  grid-template-cols: 1fr 1.1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 64px;
   align-items: center;
 }
@@ -2260,7 +2319,7 @@ img, svg {
 
 .insurance-col-right {
   display: grid;
-  grid-template-cols: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -2323,7 +2382,7 @@ img, svg {
 
 .process-timeline {
   display: grid;
-  grid-template-cols: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   position: relative;
   margin-top: 64px;
@@ -2677,7 +2736,7 @@ img, svg {
 
 .stats-grid {
   display: grid;
-  grid-template-cols: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   text-align: center;
 }
@@ -2717,37 +2776,39 @@ img, svg {
 
 .footer-top {
   display: grid;
-  grid-template-cols: 1.5fr 0.8fr 1.2fr;
-  gap: 80px;
-  margin-bottom: 64px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: start;
 }
 
 .footer-logo-area {
-  max-width: 380px;
+  max-width: 100%;
 }
 
 .footer-tagline {
-  margin-top: 24px;
-  font-size: 1rem;
-  line-height: 1.6;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  line-height: 1.5;
   color: #64748B;
+  max-width: 280px;
 }
 
 .footer-title {
   color: var(--color-white);
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-link:hover {
@@ -2758,12 +2819,12 @@ img, svg {
 .footer-contact-info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
 }
 
 .contact-item {
   display: flex;
-  gap: 16px;
+  gap: 12px;
 }
 
 .contact-item svg {
@@ -2810,7 +2871,7 @@ img, svg {
 /* Up to Tablet (Max width 1023px) */
 @media (max-width: 1023px) {
   .hero .container {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     text-align: center;
   }
@@ -2835,11 +2896,11 @@ img, svg {
   }
 
   .why-grid {
-    grid-template-cols: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .insurance-grid {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 48px;
   }
 
@@ -2848,7 +2909,7 @@ img, svg {
   }
 
   .process-timeline {
-    grid-template-cols: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .process-line {
@@ -2856,17 +2917,16 @@ img, svg {
   }
 
   .stats-grid {
-    grid-template-cols: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 48px 24px;
   }
 
   .footer-top {
-    grid-template-cols: 1.2fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
   }
 
   .footer-logo-area {
-    grid-column: span 2;
     max-width: 100%;
   }
 }
@@ -2924,7 +2984,7 @@ img, svg {
   }
 
   .why-grid {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .why-card {
@@ -2932,11 +2992,11 @@ img, svg {
   }
 
   .insurance-col-right {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .process-timeline {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 48px;
   }
 
@@ -2961,7 +3021,7 @@ img, svg {
   }
 
   .stats-grid {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .stat-number {
@@ -2969,11 +3029,39 @@ img, svg {
   }
 
   .footer-top {
-    grid-template-cols: 1fr;
-    gap: 36px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer-logo-area {
+    grid-column: span 1;
+    text-align: center;
+  }
+  
+  .footer-title {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    align-items: center;
+  }
+  
+  .footer-contact-info {
+    align-items: center;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
     grid-column: span 1;
   }
 
@@ -3679,7 +3767,7 @@ img, svg {
    ========================================================================== */
 .page-header {
   background: linear-gradient(135deg, #0a1628 0%, #0f2c59 50%, #1a3a6b 100%);
-  padding: 160px 0 100px;
+  padding: 140px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -3704,17 +3792,17 @@ img, svg {
 }
 
 .page-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--color-white);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   letter-spacing: -0.03em;
 }
 
 .page-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #CBD5E1;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .text-center {
@@ -4135,7 +4223,15 @@ img, svg {
 
 @media (max-width: 767px) {
   .page-header {
-    padding: 120px 0 60px;
+    padding: 110px 0 60px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
   }
   
   .page-title {
@@ -4316,24 +4412,64 @@ img, svg {
   
   .hero-stats-inline {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stat-inline {
+    padding: 16px 12px;
   }
   
   .stat-number-hero {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+  }
+  
+  .stat-label-hero {
+    font-size: 0.75rem;
+  }
+  
+  .hero-ctas-new {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
   }
   
   .btn-hero-primary,
   .btn-hero-secondary {
+    width: 100%;
     padding: 14px 24px;
     font-size: 0.95rem;
+    justify-content: center;
+  }
+  
+  .hero-trust-new {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .trust-item-new {
+    font-size: 0.85rem;
   }
   
   .project-title {
     font-size: 1.05rem;
   }
   
-  .contact-card {
-    padding: 24px 20px;
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 1.85rem;
+  }
+  
+  .section-desc {
+    font-size: 0.95rem;
   }
 }
    ========================================================================== */
@@ -4353,7 +4489,7 @@ img, svg {
 
 .form-row {
   display: grid;
-  grid-template-cols: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-bottom: 24px;
 }
@@ -4422,11 +4558,125 @@ img, svg {
 
 @media (max-width: 767px) {
   .contact-card {
-    padding: 32px 24px;
+    padding: 24px 18px;
+    border-radius: 20px;
   }
+  
   .form-row {
-    grid-template-cols: 1fr;
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-control,
+  .select-control,
+  .textarea-control {
+    font-size: 16px !important;
+  }
+  
+  .contact-info-item {
+    padding: 18px 14px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-info-icon {
+    width: 54px;
+    height: 54px;
+  }
+  
+  .contact-info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contact-icon-badge {
+    width: 56px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-icon-badge svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .contact-info-section {
+    position: static;
+  }
+  
+  .contact-info-header h2 {
+    text-align: center;
+    font-size: 1.65rem;
+  }
+  
+  .contact-info-header p {
+    text-align: center;
+  }
+  
+  .contact-page-grid {
+    gap: 36px;
+  }
+  
+  .contact-info-item h4 {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Logo responsive styling */
+@media (max-width: 1023px) {
+  .logo-image {
+    height: 45px;
+  }
+  
+  .logo-title {
+    font-size: 1.4rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    gap: 8px;
+  }
+  
+  .logo-image {
+    height: 38px;
+  }
+  
+  .logo-title {
+    font-size: 1.2rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .logo-text-wrapper {
+    gap: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 35px;
+  }
+  
+  .logo-title {
+    font-size: 1.1rem;
+  }
+  
+  .logo-tagline {
+    font-size: 0.5rem;
   }
 }
 
@@ -4651,7 +4901,7 @@ img, svg {
 
 .about-grid {
   display: grid;
-  grid-template-cols: 1.1fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 64px;
   align-items: center;
 }
@@ -4784,7 +5034,7 @@ img, svg {
 
 .projects-grid {
   display: grid;
-  grid-template-cols: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
@@ -4888,7 +5138,7 @@ img, svg {
 /* Responsive Overrides for About and Projects */
 @media (max-width: 1024px) {
   .projects-grid {
-    grid-template-cols: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .about-grid {
     gap: 40px;
@@ -4897,11 +5147,11 @@ img, svg {
 
 @media (max-width: 768px) {
   .about-grid {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 48px;
   }
   .projects-grid {
-    grid-template-cols: 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
   }
   .about-pillars {

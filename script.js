@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     10. INTAKE FORM SUBMISSION OVERLAY SYSTEM
+     10. INTAKE FORM SUBMISSION - SEND TO WHATSAPP
      ========================================================================== */
   const consultationForm = document.getElementById('consultation-form');
   const successOverlay = document.getElementById('form-success-overlay');
@@ -381,6 +381,36 @@ document.addEventListener('DOMContentLoaded', () => {
   if (consultationForm && successOverlay) {
     consultationForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      // Get all form values
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const location = document.getElementById('location').value;
+      const customerType = document.getElementById('customer-type').value;
+      const message = document.getElementById('message').value;
+      
+      // Format WhatsApp message
+      let whatsappMessage = `*New Solar Consultation Request*\n\n`;
+      whatsappMessage += `👤 *Name:* ${name}\n`;
+      whatsappMessage += `📱 *Phone:* ${phone}\n`;
+      whatsappMessage += `📧 *Email:* ${email}\n`;
+      whatsappMessage += `📍 *Location:* ${location}\n`;
+      whatsappMessage += `🏢 *Property Type:* ${customerType}\n`;
+      if (message) {
+        whatsappMessage += `\n💬 *Message:*\n${message}`;
+      }
+      
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // WhatsApp number (7400561349)
+      const whatsappURL = `https://wa.me/917400561349?text=${encodedMessage}`;
+      
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, '_blank');
+      
+      // Show success overlay
       successOverlay.classList.add('active');
     });
   }
@@ -515,6 +545,54 @@ const calculatorInit = () => {
     document.getElementById('yearlyGen').textContent     = yearlyGen.toLocaleString('en-IN') + ' units';
     document.getElementById('roofNeeded').textContent    = roofNeeded + ' sqft';
     document.getElementById('solarCost').textContent     = costDisplay;
+  }
+  
+  // Get Quote Button - Send to WhatsApp with calculation
+  const sendQuoteBtn = document.getElementById('sendQuoteBtn');
+  if (sendQuoteBtn) {
+    sendQuoteBtn.addEventListener('click', () => {
+      const name = document.getElementById('quoteName').value.trim();
+      const mobile = document.getElementById('quoteMobile').value.trim();
+      
+      if (!name || !mobile) {
+        alert('Please enter your Name and Mobile number');
+        return;
+      }
+      
+      // Get current calculation values
+      const monthlyBill = document.getElementById('monthlyBill').value;
+      const systemSize = document.getElementById('systemSize').textContent;
+      const annualSavings = document.getElementById('annualSavings').textContent;
+      const yearlyGen = document.getElementById('yearlyGen').textContent;
+      const roofNeeded = document.getElementById('roofNeeded').textContent;
+      const solarCost = document.getElementById('solarCost').textContent;
+      const customerType = document.querySelector('.type-btn.active').textContent;
+      
+      // Format WhatsApp message
+      let message = `*Solar Quote Request*\n\n`;
+      message += `👤 *Name:* ${name}\n`;
+      message += `📱 *Mobile:* ${mobile}\n\n`;
+      message += `*📊 Calculation Details:*\n`;
+      message += `━━━━━━━━━━━━━━━━\n`;
+      message += `💡 Customer Type: ${customerType}\n`;
+      message += `💰 Monthly Bill: ₹${monthlyBill}\n\n`;
+      message += `*Recommended System:*\n`;
+      message += `⚡ System Size: ${systemSize}\n`;
+      message += `💵 Total Cost: ${solarCost}\n`;
+      message += `💚 Annual Savings: ${annualSavings}\n`;
+      message += `🔋 Yearly Generation: ${yearlyGen}\n`;
+      message += `📐 Roof Area Needed: ${roofNeeded}\n\n`;
+      message += `I want a detailed quote for this solar system.`;
+      
+      // Encode and send to WhatsApp
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/917400561349?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+      
+      // Clear inputs
+      document.getElementById('quoteName').value = '';
+      document.getElementById('quoteMobile').value = '';
+    });
   }
 };
 
