@@ -262,7 +262,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.getElementById('custom-cursor');
   const cursorDot = document.getElementById('custom-cursor-dot');
   
-  if (cursor && cursorDot) {
+  // Hide cursor completely on touch/mobile devices
+  const isTouchDevice = ('ontouchstart' in window) || 
+    (navigator.maxTouchPoints > 0) || 
+    (window.innerWidth <= 767);
+  
+  if (isTouchDevice) {
+    if (cursor) cursor.style.display = 'none';
+    if (cursorDot) cursorDot.style.display = 'none';
+  }
+
+  if (cursor && cursorDot && !isTouchDevice) {
     let mouseX = 0;
     let mouseY = 0;
     let cursorX = 0;
@@ -421,39 +431,83 @@ document.addEventListener('DOMContentLoaded', () => {
       successOverlay.classList.remove('active');
     });
   }
+  
+  /* ==========================================================================
+     MOBILE HERO FULL SCREEN FIX
+     ========================================================================== */
+  function fixMobileHero() {
+    if (window.innerWidth <= 767) {
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const vh = window.innerHeight;
+        hero.style.height = vh + 'px';
+        hero.style.minHeight = vh + 'px';
+        hero.style.maxHeight = vh + 'px';
+        hero.style.overflow = 'hidden';
+        hero.style.paddingBottom = '0';
+        hero.style.marginBottom = '0';
+        
+        // Also ensure content doesn't overflow
+        const container = hero.querySelector('.container');
+        if (container) {
+          container.style.maxHeight = (vh - 65) + 'px';
+          container.style.overflow = 'hidden';
+        }
+      }
+    }
+  }
+  
+  // Run on load and resize
+  fixMobileHero();
+  window.addEventListener('resize', fixMobileHero);
+  window.addEventListener('orientationchange', fixMobileHero);
 });
 
 
 /* ==========================================================================
-   ANIMATED COUNTER FOR HERO STATS
+   ANIMATED COUNTER FOR HERO STATS - STOPS AT TARGET
    ========================================================================== */
 const animateCounters = () => {
   const counters = document.querySelectorAll('.stat-number-hero[data-target]');
   
   counters.forEach(counter => {
     const target = parseInt(counter.getAttribute('data-target'));
-    const plusSpan = counter.querySelector('.stat-plus');
-    const plusHTML = plusSpan ? plusSpan.outerHTML : '';
     
-    const steps = 60;
+    // Check if this stat should have a plus sign
+    const originalHTML = counter.innerHTML;
+    const shouldHavePlus = originalHTML.includes('stat-plus') || originalHTML.includes('+');
+    
+    // Count up animation (easeOut)
+    const steps = 80;
     let step = 0;
-
     const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 
     const update = () => {
       step++;
-      const progress = easeOut(step / steps);
+      const progress = easeOut(Math.min(step / steps, 1));
       const current = Math.round(progress * target);
-      counter.innerHTML = current.toLocaleString() + plusHTML;
+      
+      // Format number and add + if needed
+      let displayText = current.toLocaleString('en-US');
+      if (shouldHavePlus) {
+        displayText += '+';
+      }
+      
+      counter.textContent = displayText;
 
       if (step < steps) {
         requestAnimationFrame(update);
       } else {
-        counter.innerHTML = target.toLocaleString() + plusHTML;
+        // Reached target — STOP HERE
+        let finalText = target.toLocaleString('en-US');
+        if (shouldHavePlus) {
+          finalText += '+';
+        }
+        counter.textContent = finalText;
       }
     };
 
-    counter.innerHTML = '0' + plusHTML;
+    counter.textContent = shouldHavePlus ? '0+' : '0';
     requestAnimationFrame(update);
   });
 };
