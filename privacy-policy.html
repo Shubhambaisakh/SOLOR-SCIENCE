@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy - Solar Science India. Learn how we collect, use, and protect your personal information.">
+  <title>Privacy Policy | Solar Science</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=333.0">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F5A623'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Cpath d='M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42' stroke='%23F5A623' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+  <style>
+    /* ── Legal Page Styles ── */
+    .legal-hero {
+      background: linear-gradient(135deg, #0B1C3D 0%, #0f2460 50%, #0B1C3D 100%);
+      padding: 160px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251,191,36,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .legal-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(251,191,36,0.1);
+      border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #FBBF24;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .legal-hero h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .legal-hero h1 span { color: #FBBF24; }
+    .legal-hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .legal-hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #94A3B8;
+      font-size: 0.875rem;
+    }
+    .legal-hero-meta i { width: 16px; height: 16px; color: #FBBF24; }
+    .legal-body { background: #060d1f; padding: 80px 0 60px; }
+    .legal-layout { display: grid; grid-template-columns: 260px 1fr; gap: 60px; align-items: start; }
+    /* Sticky Sidebar */
+    .legal-sidebar {
+      position: sticky;
+      top: 100px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 28px 24px;
+    }
+    .legal-sidebar h3 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FBBF24;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .legal-nav-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+    .legal-nav-list a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      color: #94A3B8;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .legal-nav-list a:hover, .legal-nav-list a.active {
+      background: rgba(251,191,36,0.1);
+      color: #FBBF24;
+    }
+    .legal-nav-list a::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+    /* Content Area */
+    .legal-content { max-width: 100%; }
+    .legal-section { margin-bottom: 56px; scroll-margin-top: 100px; }
+    .legal-section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, #FBBF24, #F97316);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 16px;
+    }
+    .legal-section h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .legal-section p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .legal-section ul, .legal-section ol {
+      padding-left: 0;
+      margin: 0 0 16px 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .legal-section ul li, .legal-section ol li {
+      display: flex;
+      gap: 12px;
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .legal-section ul li::before {
+      content: '→';
+      color: #FBBF24;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .legal-highlight {
+      background: linear-gradient(135deg, rgba(251,191,36,0.06), rgba(249,115,22,0.04));
+      border: 1px solid rgba(251,191,36,0.15);
+      border-left: 3px solid #FBBF24;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .legal-highlight p { margin: 0; color: #CBD5E1; font-size: 0.9rem; }
+    .legal-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+    .legal-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+    .legal-card:hover { border-color: rgba(251,191,36,0.2); background: rgba(251,191,36,0.04); }
+    .legal-card-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .legal-card h4 { font-size: 0.9rem; font-weight: 700; color: #E2E8F0; margin-bottom: 8px; }
+    .legal-card p { font-size: 0.82rem; color: #64748B; margin: 0; line-height: 1.5; }
+    .legal-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 48px 0; }
+    .legal-contact-box {
+      background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(249,115,22,0.05));
+      border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 20px;
+      padding: 36px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .legal-contact-box h3 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .legal-contact-box p { color: #94A3B8; font-size: 0.9rem; margin-bottom: 24px; }
+    .legal-contact-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .legal-contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .legal-contact-links a.primary {
+      background: linear-gradient(135deg, #FBBF24, #F97316);
+      color: #000;
+    }
+    .legal-contact-links a.secondary {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #E2E8F0;
+    }
+    .legal-contact-links a:hover { transform: translateY(-2px); }
+    /* Mobile Responsive */
+    @media (max-width: 767px) {
+      .legal-hero { padding: 120px 0 60px; }
+      .legal-hero h1 { font-size: 2.2rem; }
+      .legal-layout { grid-template-columns: 1fr; gap: 40px; }
+      .legal-sidebar { position: static; }
+      .legal-card-grid { grid-template-columns: 1fr; }
+      .legal-contact-box { padding: 24px 20px; }
+      .legal-contact-links { flex-direction: column; }
+      .legal-contact-links a { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <svg class="preloader-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="5" fill="none" stroke="#F5A623" stroke-width="2"/>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#F5A623" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="preloader-bar"><div class="preloader-progress"></div></div>
+      <span class="preloader-text">Solar Science</span>
+    </div>
+  </div>
+
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo_transparent.png" alt="Solar Science Logo" class="logo-image">
+        <div class="logo-text-wrapper">
+          <span class="logo-title">Solar Science</span>
+          <span class="logo-tagline">CLEAN ENERGY, SMART DECISION</span>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="https://wa.me/917400561349?text=Hi,%20I%20want%20a%20solar%20quote" class="btn btn-primary btn-nav" target="_blank">Get Quote</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="legal-hero">
+    <div class="container">
+      <div class="legal-hero-tag">
+        <i data-lucide="shield-check"></i>
+        Legal Document
+      </div>
+      <h1>Privacy <span>Policy</span></h1>
+      <p style="color:#94A3B8;font-size:1.05rem;max-width:580px;line-height:1.7;margin-bottom:20px;">
+        We are committed to protecting your personal information and your right to privacy. This policy explains what data we collect and how we use it.
+      </p>
+      <div class="legal-hero-meta">
+        <span><i data-lucide="calendar"></i> Effective: January 1, 2025</span>
+        <span><i data-lucide="refresh-cw"></i> Last Updated: June 15, 2026</span>
+        <span><i data-lucide="clock"></i> 8 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="legal-body">
+    <div class="container">
+      <div class="legal-layout">
+
+        <!-- Sidebar -->
+        <aside class="legal-sidebar">
+          <h3>📋 Contents</h3>
+          <ul class="legal-nav-list">
+            <li><a href="#info-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use">How We Use Your Data</a></li>
+            <li><a href="#data-sharing">Data Sharing</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#cookies">Cookies Policy</a></li>
+            <li><a href="#your-rights">Your Rights</a></li>
+            <li><a href="#third-party">Third-Party Links</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#changes">Policy Changes</a></li>
+            <li><a href="#contact-pp">Contact Us</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="legal-content">
+
+          <div class="legal-highlight">
+            <p>☀️ <strong style="color:#FBBF24;">Solar Science India Ltd.</strong> ("we", "us", or "our") operates solarscience.in. By using our services, you agree to the collection and use of information in accordance with this policy. We value your trust and handle your data responsibly.</p>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="legal-section" id="info-we-collect">
+            <div class="legal-section-num">1</div>
+            <h2>Information We Collect</h2>
+            <p>We collect different types of information to provide and improve our services to you.</p>
+            <div class="legal-card-grid">
+              <div class="legal-card">
+                <div class="legal-card-icon">👤</div>
+                <h4>Personal Information</h4>
+                <p>Name, email, phone number, and address provided when you contact us or request a quote.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">📍</div>
+                <h4>Location Data</h4>
+                <p>Property location to assess solar potential and provide accurate installation estimates.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">💻</div>
+                <h4>Usage Data</h4>
+                <p>Pages visited, time spent, browser type, IP address, and device information.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">⚡</div>
+                <h4>Energy Data</h4>
+                <p>Electricity consumption details you provide to calculate solar savings estimates.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 2 -->
+          <div class="legal-section" id="how-we-use">
+            <div class="legal-section-num">2</div>
+            <h2>How We Use Your Data</h2>
+            <p>Your information is used exclusively to provide better services and improve your experience with Solar Science.</p>
+            <ul>
+              <li>Process your solar consultation requests and generate custom proposals</li>
+              <li>Communicate about your project status, installation schedule, and support</li>
+              <li>Send important service updates, maintenance reminders, and warranty information</li>
+              <li>Improve our website functionality and user experience through analytics</li>
+              <li>Comply with legal obligations and government subsidy documentation requirements</li>
+              <li>Send promotional offers (only with your explicit consent — you can opt out anytime)</li>
+            </ul>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 3 -->
+          <div class="legal-section" id="data-sharing">
+            <div class="legal-section-num">3</div>
+            <h2>Data Sharing &amp; Disclosure</h2>
+            <p>We do <strong style="color:#FBBF24;">not sell</strong> your personal data to third parties. We may share data only in these specific cases:</p>
+            <ul>
+              <li>With trusted installation partners and certified technicians assigned to your project</li>
+              <li>With government bodies (MNRE, DISCOM) for subsidy processing and net metering applications</li>
+              <li>With payment processors for secure transaction handling</li>
+              <li>With analytics providers (Google Analytics) in anonymized, aggregated form</li>
+              <li>When required by law, court order, or regulatory authority</li>
+            </ul>
+            <div class="legal-highlight">
+              <p>🔒 All third-party partners are bound by strict confidentiality agreements and are prohibited from using your data for any purpose other than completing your project.</p>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 4 -->
+          <div class="legal-section" id="data-security">
+            <div class="legal-section-num">4</div>
+            <h2>Data Security</h2>
+            <p>We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, or disclosure.</p>
+            <ul>
+              <li>SSL/TLS encryption on all data transmitted through our website</li>
+              <li>Secure servers with restricted access and regular security audits</li>
+              <li>Employee training on data privacy and confidentiality protocols</li>
+              <li>Regular backups and disaster recovery procedures</li>
+              <li>Automatic session timeouts and secure authentication systems</li>
+            </ul>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 5 -->
+          <div class="legal-section" id="cookies">
+            <div class="legal-section-num">5</div>
+            <h2>Cookies Policy</h2>
+            <p>We use cookies to enhance your browsing experience. You can control cookie settings through your browser at any time.</p>
+            <div class="legal-card-grid">
+              <div class="legal-card">
+                <div class="legal-card-icon">🔧</div>
+                <h4>Essential Cookies</h4>
+                <p>Required for the website to function. Cannot be disabled.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">📊</div>
+                <h4>Analytics Cookies</h4>
+                <p>Help us understand how visitors use our site to improve it.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">🎯</div>
+                <h4>Marketing Cookies</h4>
+                <p>Used to show relevant ads. Only with your consent.</p>
+              </div>
+              <div class="legal-card">
+                <div class="legal-card-icon">⚙️</div>
+                <h4>Preference Cookies</h4>
+                <p>Remember your settings like language and region.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 6 -->
+          <div class="legal-section" id="your-rights">
+            <div class="legal-section-num">6</div>
+            <h2>Your Rights</h2>
+            <p>Under applicable Indian data protection laws, you have the following rights regarding your personal data:</p>
+            <ul>
+              <li><strong style="color:#E2E8F0;">Right to Access</strong> — Request a copy of all personal data we hold about you</li>
+              <li><strong style="color:#E2E8F0;">Right to Correction</strong> — Ask us to correct any inaccurate or incomplete data</li>
+              <li><strong style="color:#E2E8F0;">Right to Deletion</strong> — Request deletion of your data (subject to legal retention requirements)</li>
+              <li><strong style="color:#E2E8F0;">Right to Portability</strong> — Receive your data in a structured, machine-readable format</li>
+              <li><strong style="color:#E2E8F0;">Right to Object</strong> — Opt out of marketing communications at any time</li>
+              <li><strong style="color:#E2E8F0;">Right to Withdraw Consent</strong> — Withdraw permission for data processing without penalty</li>
+            </ul>
+            <div class="legal-highlight">
+              <p>📧 To exercise any of these rights, contact us at <strong style="color:#FBBF24;">privacy@solarscience.in</strong> — we will respond within 30 days.</p>
+            </div>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 7 -->
+          <div class="legal-section" id="third-party">
+            <div class="legal-section-num">7</div>
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to external websites such as government portals (MNRE, SECI), manufacturer websites, and social media platforms. We are not responsible for the privacy practices of these external sites and encourage you to review their policies separately.</p>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 8 -->
+          <div class="legal-section" id="children">
+            <div class="legal-section-num">8</div>
+            <h2>Children's Privacy</h2>
+            <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has provided us personal data, please contact us immediately and we will delete it promptly.</p>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 9 -->
+          <div class="legal-section" id="changes">
+            <div class="legal-section-num">9</div>
+            <h2>Policy Changes</h2>
+            <p>We may update this Privacy Policy periodically to reflect changes in our practices or applicable laws. We will notify you of significant changes by:</p>
+            <ul>
+              <li>Posting the updated policy on this page with a revised "Last Updated" date</li>
+              <li>Sending an email notification to registered users</li>
+              <li>Displaying a prominent banner on our website</li>
+            </ul>
+            <p>Continued use of our services after changes constitutes your acceptance of the updated policy.</p>
+          </div>
+
+          <div class="legal-divider"></div>
+
+          <!-- Section 10 - Contact -->
+          <div class="legal-section" id="contact-pp">
+            <div class="legal-section-num">10</div>
+            <h2>Contact Us</h2>
+            <p>For any questions, concerns, or requests regarding this Privacy Policy, reach out to our Data Protection Officer:</p>
+          </div>
+
+          <!-- Contact Box -->
+          <div class="legal-contact-box">
+            <h3>🛡️ Have a Privacy Question?</h3>
+            <p>Our team is available Monday–Saturday, 9 AM – 6 PM IST to address your concerns.</p>
+            <div class="legal-contact-links">
+              <a href="mailto:privacy@solarscience.in" class="primary">
+                <i data-lucide="mail"></i> privacy@solarscience.in
+              </a>
+              <a href="tel:+917400561349" class="secondary">
+                <i data-lucide="phone"></i> +91 74005 61349
+              </a>
+              <a href="contact.html" class="secondary">
+                <i data-lucide="message-circle"></i> Contact Page
+              </a>
+            </div>
+          </div>
+
+        </div><!-- end legal-content -->
+      </div><!-- end legal-layout -->
+    </div><!-- end container -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo-area">
+          <a href="index.html" class="logo" style="color: var(--color-white);">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Solar Science</span>
+          </a>
+          <p class="footer-tagline">Leading the transition to clean energy with performance guarantees and absolute asset security.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="projects.html" class="footer-link">Projects</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <div class="contact-text">
+                <strong>Solar Science India Ltd.</strong>
+                <p>Sector 62, Noida, UP - 201301</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <div class="contact-text"><a href="tel:+918001021234">1800-102-1234</a></div>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <div class="contact-text"><a href="mailto:info@solarscience.in">info@solarscience.in</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Solar Science. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
