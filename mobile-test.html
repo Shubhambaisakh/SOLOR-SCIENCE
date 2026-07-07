@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Hero Test</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .test-hero {
+      height: 100vh;
+      height: 100dvh;
+      min-height: 100vh;
+      min-height: 100dvh;
+      max-height: 100vh;
+      max-height: 100dvh;
+      background: linear-gradient(135deg, #0a0a1e 0%, #1a1a3e 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    
+    .test-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #FBBF24, #F97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    .next-section {
+      height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #e94560 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+    
+    .info-box {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .success {
+      color: #4ade80;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <section class="test-hero">
+    <div class="content">
+      <div class="badge">☀️ ⚡ Test Page</div>
+      <h1>Hero Section Full Screen Test</h1>
+      <p>This hero section should fill your ENTIRE mobile screen.</p>
+      <p>You should NOT see any blue gradient from below.</p>
+      <p>If you can scroll down, the fix hasn't worked yet.</p>
+    </div>
+    <div class="info-box">
+      <span class="success">✓</span> Using 100dvh for mobile viewport
+    </div>
+  </section>
+  
+  <section class="next-section">
+    <h2>Next Section (Blue Gradient)</h2>
+  </section>
+</body>
+</html>

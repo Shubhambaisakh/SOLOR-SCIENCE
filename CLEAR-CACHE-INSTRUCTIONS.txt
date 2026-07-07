@@ -1,0 +1,83 @@
+═══════════════════════════════════════════════════════════════
+  🔧 MOBILE HERO SECTION - CACHE CLEARING INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+PROBLEM: You're seeing OLD design because browser cache is not updating
+
+✅ SOLUTIONS (Try these in order):
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. HARD REFRESH (EASIEST - Try This First!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+On Mobile Chrome/Safari:
+  1. Open http://localhost:8000
+  2. Tap the three dots menu (⋮) or address bar
+  3. Tap "Reload" or pull down to refresh
+  4. If that doesn't work, try below...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. CLEAR BROWSER CACHE (RECOMMENDED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Chrome Mobile:
+  1. Tap three dots (⋮) → Settings
+  2. Privacy and Security → Clear Browsing Data
+  3. Select "Cached images and files"
+  4. Tap "Clear data"
+  5. Go back to http://localhost:8000
+
+Safari Mobile:
+  1. Settings → Safari
+  2. Scroll down → "Clear History and Website Data"
+  3. Tap "Clear History and Data"
+  4. Open Safari again → http://localhost:8000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. INCOGNITO/PRIVATE MODE (100% GUARANTEED)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Chrome Mobile:
+  1. Tap three dots (⋮)
+  2. "New Incognito Tab"
+  3. Go to http://localhost:8000
+  ✅ This bypasses ALL cache!
+
+Safari Mobile:
+  1. Tap tabs button (bottom right)
+  2. Tap "Private" (bottom left)
+  3. Go to http://localhost:8000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. TEST PAGE (Verify Fix Works)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Open this simple test page in incognito:
+  http://localhost:8000/mobile-test.html
+
+If this page fills full screen = Fix is working!
+If main page still shows old design = Cache issue
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 WHAT WAS FIXED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Hero section now uses 100dvh (dynamic viewport height)
+✅ Inline styles added to HTML (bypasses CSS cache)
+✅ JavaScript force-sets hero height on mobile
+✅ All content compressed to fit single screen
+✅ Hidden hero badge on mobile to save space
+✅ Solar panel visual reduced to 160px
+✅ All gaps and margins minimized
+✅ Blue calculator section won't peek through anymore
+✅ CSS version updated to v200.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 SERVER RUNNING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Server: http://localhost:8000
+✓ Main page: http://localhost:8000/index.html
+✓ Test page: http://localhost:8000/mobile-test.html
+
+═══════════════════════════════════════════════════════════════
